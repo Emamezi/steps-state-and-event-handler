@@ -10,14 +10,14 @@ function App() {
   const [isOpen, setIsOpen] = useState(true);
 
   const previousButtonHandler = () => {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((step) => step - 1);
   };
   const nextButtonHandler = () => {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) setStep((step) => step + 1);
   };
 
   const closeStepHandler = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((isOpen) => !isOpen);
   };
   return (
     <div>
