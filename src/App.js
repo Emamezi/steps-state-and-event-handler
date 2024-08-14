@@ -37,18 +37,23 @@ function App() {
           </p>
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+            <Button
+              bgColor="#7950f2"
+              textColor="#fff"
               onClick={previousButtonHandler}
             >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              {" "}
+              👈 Previous{" "}
+            </Button>
+
+            <Button
+              bgColor="#7950f2"
+              textColor="#fff"
               onClick={nextButtonHandler}
             >
-              Next
-            </button>
+              {" "}
+              Next 👉{" "}
+            </Button>
           </div>
         </div>
       )}
@@ -57,3 +62,14 @@ function App() {
 }
 
 export default App;
+
+const Button = ({ bgColor, textColor, onClick, children }) => {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
